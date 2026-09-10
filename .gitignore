@@ -1,0 +1,14 @@
+# OS cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Never commit CML controller credentials or exported tokens
+*.token
+secrets.*
+.env
