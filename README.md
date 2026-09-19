@@ -39,6 +39,9 @@ curl -k -X POST "https://<cml-host>/api/v0/import" \
 | # | Topic | Lab | Nodes | Platform |
 |---|---|---|---|---|
 | 1 | BGP | [Route Filtering and Address Family Manipulation](bgp/01-route-filtering-af-manipulation/) | 4 | IOSv |
+| 2 | BGP | [eBGP Fundamentals and IGP Redistribution](bgp/02-ebgp-and-igp-redistribution/) | 5 | IOL-XE |
+| 3 | BGP | [Route Summarization with aggregate-address](bgp/03-route-summarization-aggregate-address/) | 3 | IOSv |
+| 4 | BGP | [INE BGP Path Attributes](bgp/04-bgp-path-attributes/) | 6 | IOSv + CSR1000v |
 
 ## Node platform
 

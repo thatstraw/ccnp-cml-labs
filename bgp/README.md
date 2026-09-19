@@ -6,10 +6,17 @@ address-family structure.
 | # | Lab | Focus | Nodes | Autonomous Systems |
 |---|---|---|---|---|
 | 01 | [Route Filtering and Address Family Manipulation](01-route-filtering-af-manipulation/) | `distribute-list`, `prefix-list`, AS_PATH `filter-list`, `route-map` weight | 4 × IOSv | 65100 / 65200 / 65300 / 65400 |
+| 02 | [eBGP Fundamentals and IGP Redistribution](02-ebgp-and-igp-redistribution/) | `redistribute eigrp`/`ospf`/`static` into BGP | 5 × IOL-XE | 65100 / 65200 |
+| 03 | [Route Summarization with aggregate-address](03-route-summarization-aggregate-address/) | `aggregate-address`, `summary-only`, `as-set` | 3 × IOSv | 65100 / 65200 / 65300 |
+| 04 | [INE BGP Path Attributes](04-bgp-path-attributes/) | Weight, Local Preference, AS_PATH prepend, Origin, MED — plus OSPF-redistribution transit and an iBGP-connected dual-homed AS | 4 × IOSv + 2 × CSR1000v | 2 / 134 / 12 |
 
 ## Recurring conventions in these labs
 
-**MP-BGP syntax is mandatory.** Every router disables legacy IPv4 auto-activation:
+Labs 02 and 03 intentionally use classic BGP syntax (`network`/`redistribute` directly under
+`router bgp`, no explicit address-family) rather than the MP-BGP convention below — that's a
+deliberate contrast, not an oversight. The MP-BGP conventions are specific to Lab 01.
+
+**MP-BGP syntax is mandatory (Lab 01).** Every router disables legacy IPv4 auto-activation:
 
 ```
 router bgp <LOCAL_AS>
